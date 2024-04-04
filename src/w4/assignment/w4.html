@@ -10,6 +10,9 @@
       type="text/css"
     />
     <!-- 보통 마진 처리를 할 때, bottom으로 준다. -->
+    <!-- div에게 항상 이름을 지어주자 (class 태그를 사용해주면 된다.) -->
+    <!-- option + w를 누르면 p태그로 한 번에 묶이는 기능을 잘 활용하자 -->
+    <!-- class는 그저 규칙이다. -->
     <style>
       * {
         box-sizing: border-box;
@@ -110,17 +113,17 @@
   <body>
     <div class="container">
       <h1>파스타 카르보나라</h1>
-      <p style="padding-bottom: 8px; font-size: 18px; font-weight: 700">
+      <p style="padding-bottom: 0.5rem; font-size: 1.125rem; font-weight: 700">
         <strong>CLAIRE SAFFITZ</strong>
       </p>
-      <p style="padding-bottom: 8px; font-size: 18px; font-weight: 500">
+      <p style="padding-bottom: 0.5rem; font-size: 1.125rem; font-weight: 500">
         <em>레서피</em>
       </p>
       <p
         style="
-          padding-bottom: 24px;
+          padding-bottom: 1.5rem;
           color: #585550;
-          font-size: 14px;
+          font-size: 0.875rem;
           font-weight: 400;
         "
       >
@@ -132,18 +135,18 @@
       />
       <p
         style="
-          padding-bottom: 24px;
-          font-size: 14px;
+          padding-bottom: 1.5rem;
+          font-size: 0.875rem;
           font-weight: 400;
           color: #585550;
         "
       >
         사진: Chelsie Craig, 스타일링: Molly Baz
       </p>
-      <p style="padding-bottom: 16px; font-size: 18px; font-weight: 500">
+      <p style="padding-bottom: 1rem; font-size: 1.125rem; font-weight: 500">
         <strong>총 소요 시간 24분</strong>
       </p>
-      <p style="padding-bottom: 8px; font-size: 18px; font-weight: 400">
+      <p style="padding-bottom: 0.5rem; font-size: 1.125rem; font-weight: 400">
         육즙이 풍부한 바삭한 돼지고기, 후추 맛이 가득하고 계란으로 풍성한 벨벳
         같은 치즈 소스를 가진 카르보나라는 밤새 놀고 들어온 새벽 2시도 만들 수
         있을 만큼 정말 쉽습니다. 카르보나라는 로마의 대표적인 요리 중 하나이며,
@@ -156,7 +159,7 @@
         로마노 치즈나 진짜 파르미지아노 레지아노, 그리고 좋은 스파게티나
         부카티니 혹은 리가토니를 사세요.
       </p>
-      <p style="padding-bottom: 8px; font-size: 18px; font-weight: 400">
+      <p style="padding-bottom: 0.5rem; font-size: 1.125rem; font-weight: 400">
         기술에 대해 한 마디: 어떤 카르보나라 레시피던지 크리미한 소스 특유의
         윤기나는 광택을 얻기 위해서는 정확한 시간과 온도에 재료를 첨가하는 것이
         중요합니다. 면수를 ¼컵씩 계란 믹스에 섞고, 파스타에 추가하기 전에 불을
@@ -164,11 +167,11 @@
         잘 섞을 수 있습니다. 그 이후에는 모든 것을 빠르게 섞고 필요에 따라
         소스를 묽게 만들기 위해 더 많은 면수을 추가하세요.
       </p>
-      <p style="padding-bottom: 24px; font-size: 18px; font-weight: 400">
+      <p style="padding-bottom: 1.5rem; font-size: 1.125rem; font-weight: 400">
         저녁 식사 때는 이 파스타 요리를 샐러드와 함께 제공하는 것이 좋지만, 밤새
         놀고 난 뒤라면 그저 포크를 집어 파스타만 먹어도 됩니다.
       </p>
-      <div style="padding-inline: 32px; padding-bottom: 48px">
+      <div style="padding-inline: 2rem; padding-bottom: 3rem">
         <p class="callout">
           본 앱티트에 표시된 모든 제품은 편집자가 협찬을 받지 않고 독립적으로
           선택한 것입니다. 그러나 아래의 소매 링크를 통해 구매해주신다면 저희가
@@ -176,25 +179,40 @@
         </p>
       </div>
       <h2>재료</h2>
-      <p style="padding-bottom: 12px; font-size: 14px; font-weight: 400">
+      <p style="padding-bottom: 0.75rem; font-size: 0.875rem; font-weight: 400">
         4인분 기준
       </p>
       <table>
         <tr>
-          <td style="padding-bottom: 6px; border-bottom: 2px solid #b1ada8">
+          <td
+            style="
+              padding-bottom: 0.375rem;
+              border-bottom: 0.125rem solid #b1ada8;
+            "
+          >
             수량
           </td>
-          <td style="padding-bottom: 6px; border-bottom: 2px solid #b1ada8">
+          <td
+            style="
+              padding-bottom: 0.375rem;
+              border-bottom: 0.125rem solid #b1ada8;
+            "
+          >
             단위
           </td>
-          <td style="padding-bottom: 6px; border-bottom: 2px solid #b1ada8">
+          <td
+            style="
+              padding-bottom: 0.375rem;
+              border-bottom: 0.125rem solid #b1ada8;
+            "
+          >
             품목
           </td>
         </tr>
         <tr>
-          <td style="text-align: right; padding-top: 8px">3</td>
-          <td style="padding-top: 8px">Tbsp.</td>
-          <td style="padding-top: 8px">코셔 소금</td>
+          <td style="text-align: right; padding-top: 0.5rem">3</td>
+          <td style="padding-top: 0.5rem">Tbsp.</td>
+          <td style="padding-top: 0.5rem">코셔 소금</td>
         </tr>
         <tr>
           <td style="text-align: right">4</td>
@@ -236,53 +254,53 @@
       </table>
       <h2>준비</h2>
       <h3>단계 1</h3>
-      <p style="padding-bottom: 20px; font-size: 18px; font-weight: 400">
+      <p style="padding-bottom: 1.25rem; font-size: 1.125rem; font-weight: 400">
         큰 냄비에 5.5pt.의 물을 센 불로 가열하세요. 김이 올라오기 시작하면 소금
         3큰술을 넣고 뚜껑을 덮어주세요 (이렇게 하면 물이 빨리 끓습니다).
       </p>
       <h3>단계 2</h3>
-      <p style="padding-bottom: 20px; font-size: 18px; font-weight: 400">
+      <p style="padding-bottom: 1.25rem; font-size: 1.125rem; font-weight: 400">
         물이 끓기 전에 다른 준비를 해주세요. 관찰레 4oz. 를 약 1x¼" 정도 크기로
         잘라주세요. 치즈 2oz. 를 곱게 갈아서 ¼ 분량은 나중을 위해 따로
         떼어두세요.
       </p>
       <h3>단계 3</h3>
-      <p style="padding-bottom: 20px; font-size: 18px; font-weight: 400">
+      <p style="padding-bottom: 1.25rem; font-size: 1.125rem; font-weight: 400">
         중간 크기의 그릇에 계란 6개 중 4개는 노른자만, 나머지 2개는 흰자도 같이
         휘핑해줍니다. 노른자들과 흰자가 하나가 될 때까지 휘핑한 후 (나중을 위해
         떼어둔 분량을 제외한) 갈아놓은 치즈를 넣어주세요. 후추를 적당히 갈아
         넣고 한 켠에 보관해주세요.
       </p>
       <h3>단계 4</h3>
-      <p style="padding-bottom: 20px; font-size: 18px; font-weight: 400">
+      <p style="padding-bottom: 1.25rem; font-size: 1.125rem; font-weight: 400">
         냄비 옆에서 주물팬 등 두꺼운 팬에 기름 2큰술을 중간 불로 가열해주세요.
         관찰레를 넣고 가장자리가 바삭해질 때까지 가끔뒤적이며 약 7-10분간
         조리해주세요.
       </p>
       <h3>단계 5</h3>
-      <p style="padding-bottom: 20px; font-size: 18px; font-weight: 400">
+      <p style="padding-bottom: 1.25rem; font-size: 1.125rem; font-weight: 400">
         관찰레를 조리하던 팬의 불을 끄세요. 관찰레를 건져서 작은 그릇에
         옮겨주세요. 관찰레에서 나온 기름은 내열 계량컵에 붓고, 팬에 다시 약
         3큰술을 넣어주세요. 남은 기름은 버려주세요.
       </p>
       <h3>단계 6</h3>
-      <p style="padding-bottom: 20px; font-size: 18px; font-weight: 400">
+      <p style="padding-bottom: 1.25rem; font-size: 1.125rem; font-weight: 400">
         파스타 1lb.를 끓는 물에 넣고 가끔 저어주며, 포장에 적힌 시간보다 2분 더
         짧게 조리해주세요. 파스타가 거의 익을 때면, 내열 계량컵으로 면수 1¾컵을
         떠서 가져오세요.
       </p>
       <h3>단계 7</h3>
-      <p style="padding-bottom: 20px; font-size: 18px; font-weight: 400">
+      <p style="padding-bottom: 1.25rem; font-size: 1.125rem; font-weight: 400">
         팬에 떠놓은 면수 중 1컵을 붓고 넣고 중간 불로 끓이세요. 콜랜더로
         파스타를 떠서 팬에 옮겨주세요.
       </p>
       <h3>단계 8</h3>
-      <p style="padding-bottom: 20px; font-size: 18px; font-weight: 400">
+      <p style="padding-bottom: 1.25rem; font-size: 1.125rem; font-weight: 400">
         파스타를 계속 휘저어가며, 물이 대략 절반 정도 줄어들고, 면이 알단테가
         될때까지 약 2분간 조리하세요. 팬을 레인지에서 꺼내세요.
       </p>
       <h3>단계 9</h3>
-      <p style="padding-bottom: 20px; font-size: 18px; font-weight: 400">
+      <p style="padding-bottom: 1.25rem; font-size: 1.125rem; font-weight: 400">
         면수 ¼컵을 계란믹스에 부어 휘젓고, 아주 천천히 팬에 흘려 넣으면서 계속
         저어주세요. 치즈가 녹고 계란이 윤기가는 소스를 형성할 때까지 계속
         저어주세요. 필요하면 소금을 넣어 간을 조절하세요. 소스를 흐르는 크림과
@@ -290,11 +308,11 @@
         사용하지는 않을 것입니다).
       </p>
       <h3>단계 10</h3>
-      <p style="padding-bottom: 48px; font-size: 18px; font-weight: 400">
+      <p style="padding-bottom: 3rem; font-size: 1.125rem; font-weight: 400">
         관찰레를 섞어서 파스타를 그릇에 나누어주세요. 후추와 따로 떼어둔
         치즈가루로 꾸며주세요.
       </p>
-      <div style="padding-inline: 32px; padding-bottom: 32px">
+      <div style="padding-inline: 2rem; padding-bottom: 2rem">
         <p class="callout">
           편집자의 참고 사항: 이 레시피는 원래 2018년 1월호에 게재되었습니다. 더
           많은 최고의 파스타 레시피를 확인하려면 여기를 참조하세요.
