@@ -9,9 +9,11 @@
       rel="stylesheet"
       type="text/css"
     />
+    <!-- 보통 마진 처리를 할 때, bottom으로 준다. -->
     <style>
       * {
         box-sizing: border-box;
+        /* 눈누폰트, 구글폰트, 어도비폰트에서 웹용 폰트를 가져올 수 있다. */
         font-family: "Spoqa Han Sans Neo", "sans-serif";
         margin: 0;
         padding: 0;
@@ -22,20 +24,25 @@
       }
 
       .container {
-        max-width: 1024px;
+        /* px단위 모두 rem으로 고쳐주기 */
+        /* option + z를 누르면 바꿀 수 있다. */
+        /* px단위로 적 */
+        max-width: 64rem;
         background-color: #f1eee8;
+        /* 세로상에서 가운데로 놓기 위해서는 margin-inline: auto;를 작성해준다. */
         margin-inline: auto;
       }
 
       h1 {
-        font-size: 69px;
+        font-size: 4.3125rem;
         font-weight: 700;
         color: #24211d;
-        padding: 32px 32px 8px 32px;
+        padding: 2rem 2rem 0.5rem 2rem;
+        /* line-height: 150%; */
       }
 
       p {
-        padding-inline: 32px 32px;
+        padding-inline: 2rem 2rem;
         color: #24211d;
       }
 
@@ -43,49 +50,60 @@
         font-style: normal;
       }
 
+      /* 이미지 위와 아래의 간격
+      이미지와 캡션을 하나의 div로 묶고, 그 div에게 너는 위아래로 24px의 간격을 가지라고 명령하면 편히 가능함
+      이런경우를 더 잘 생각해보고 다른 경우에도 적용해보자. */
+      /* 이미지를 묶을 때, figure 태그를 사용해서 묶고, 캡션을 figcaption 태그 안에 넣어주기
+      이제 figure에게 마진을 주면 사진의 마진 문제가 해결된다. */
+      /* 마진상쇠
+      그렇다면 기존의 p태그가 가지고 있던 8px의 간격은 어떻게 되었는가?
+      상쇠되어 24px의 간격이 적용된다.
+      중첩의 개념으로 이해하기
+      형재들일 때에만 이 마진 상쇠가 이뤄진다. (특히 위아래의 마진관계에 있어서)*/
       img {
         max-width: 100%;
-        padding-left: 32px;
-        padding-right: 32px;
-        padding-bottom: 8px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 0.5rem;
       }
 
       .callout {
         background-color: #dcccad;
-        padding: 16px;
-        border-radius: 8px;
-        font-size: 14px;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        font-size: 0.875rem;
         font-weight: 400;
       }
 
       h2 {
-        padding-inline: 32px;
-        padding-bottom: 12px;
-        font-size: 35px;
+        padding-inline: 2rem;
+        padding-bottom: 0.75rem;
+        font-size: 2.1875rem;
         font-weight: 700;
         color: #24211d;
+        /* line-height: 150%; */
       }
 
       h3 {
-        padding-inline: 32px;
-        padding-bottom: 8px;
-        font-size: 23px;
+        padding-inline: 2rem;
+        padding-bottom: 0.5rem;
+        font-size: 1.4375rem;
         font-weight: 500;
         color: #24211d;
       }
 
       table {
-        padding-inline: 32px;
+        padding-inline: 2rem;
         color: #24211d;
-        font-size: 18px;
+        font-size: 1.125rem;
         font-weight: 400;
-        padding-bottom: 48px;
-        border-spacing: 0px;
+        padding-bottom: 3rem;
+        border-spacing: 0rem;
       }
 
       td {
-        padding-inline: 12px;
-        padding-block: 4px;
+        padding-inline: 0.75rem;
+        padding-block: 0.25rem;
       }
     </style>
   </head>
