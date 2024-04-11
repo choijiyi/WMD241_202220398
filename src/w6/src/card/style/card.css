@@ -1,0 +1,104 @@
+/* font 불러오기
+@import는 css에 넣으면 된다. */
+@import url("https://fonts.googleapis.com/css2?family=Cute+Font&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+body {
+  font-family: "Cute Font", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.card.card--color-blue {
+  background-color: oklch(98% 0.025 200);
+}
+
+/* 기본은 텍스트 사이즈, border-box는 테두리 사이즈 */
+* {
+  box-sizing: border-box;
+}
+
+/* 영역을 넘어가는 것에 대해 안보이게 하거나 스크롤이 되게 하는 방법이 있다. */
+/* 문제를 겪고 있는 상황에 대해서만 명령을 내리자 */
+/* 만약 이미지의 사이즈가 작을 경우 에는 max-width: 100%말고 */
+img {
+  max-width: 100%;
+}
+
+.card__img {
+  width: 100%;
+}
+
+/* 여러개의 div중에 card라는 class명을 가진 div에게 적용하고자 한다면 앞에 .을 붙여준다. */
+/* 웹에서는 명시적 값을 잘 넣지 않는다.*/
+/* rem - 사이즈들이 글자 크기와 함께 움직이는 단위
+          1rem이 보통 16px이다. */
+/* art + z를 하면 rem단위로 바꿀 수 있다. */
+/* hsl과 hsb는 기계상치 밝기여서 가장 밝게 보여주고 있어도 사람의 인지가 빨, 녹, 파가 함께 있으면 그린을 가장 밝게 본다. */
+/* shift + a = 피그마의 오토 레이아웃 */
+/* 웹디자인 시 lch의 사용 강력 추천 */
+/* lch - % 소수점단위 */
+.card {
+  max-width: 25rem;
+  background-color: oklch(98% 0.025 90);
+  overflow-x: hidden;
+  border-radius: 0.75rem;
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 3rem;
+}
+
+/* psuedo selector */
+.card:first-child {
+  margin-top: 0;
+}
+
+.card__top {
+  padding-inline: 1rem;
+  padding-block: 0.75rem;
+}
+
+.card__bottom {
+  padding: 1rem;
+}
+
+.card__p {
+  margin-top: 2rem;
+}
+
+.card__title {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.card__subtitle {
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  line-height: 1.25rem;
+}
+
+/* css selector */
+/* card__bottom의 안에 있는 그 어떤 .card__title */
+/* .card__bottom .card__title {
+  font-weight: 400;
+} */
+/* .card__bottom 바로 아래 .car__title */
+.card__bottom > .card__title {
+  font-weight: 400;
+}
+
+.card__bottom .card__subtitle {
+  margin-top: 0;
+}
+
+/* 셀렉터 관련 기억할것.
+1. 띄어쓰기하면 자손을 의미 // 조상중에 있으면 무조건
+.a-class .b-class => a-classs를 조상으로 가진 모든 b-class
+2. > 를 쓰면 자식을 의미 // 부모일때만
+.a-class > .b-class => a-classs를 부모로 가진 모든 b-class */
+
+/* 셀렉터 관련 두번째 기억할 것.
+3. .a-class.b-class => <elem class="a-class b-class"> */
