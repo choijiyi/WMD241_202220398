@@ -124,6 +124,10 @@
   justify-content: space-between;
 }
 
+.search_color {
+  color: #666666;
+}
+
 .search_list {
   list-style: none;
   padding: 0;
