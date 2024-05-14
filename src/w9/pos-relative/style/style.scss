@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+// 보통 변수는 한 곳에 모아서 관리한다.
+:root {
+  --card-m-y: 1rem;
+  --card-m-x: 1.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 150%;
+  color: oklch(0.3 0 0);
+  background-color: oklch(0.9 0 0);
+  overflow-x: hidden;
+}
+
+p {
+  margin-block: 0;
+}
+
+img {
+  // 기본값은 display: inline으로 되어있다.
+  display: block;
+}
+
+.section {
+  > h2 {
+    text-align: center;
+  }
+}
+
+.container {
+  max-width: 60rem;
+  padding: 5rem;
+  // margin-inline: auto를 넣어 가운데로 배치 되도록
+  margin-inline: auto;
+  background-color: oklch(0.95 0 0);
+}
+
+.card {
+  margin-top: 2rem;
+  background-color: oklch(1 0 0);
+  border: 1px solid oklch(0.5 0 0);
+  border-radius: 0.75rem;
+  .section--opt-pos-rel & {
+    position: relative;
+    &:nth-child(1) {
+      left: 1rem;
+    }
+    &:nth-child(2) {
+      left: 2rem;
+      top: -10rem;
+    }
+    &:nth-child(3) {
+      left: 3rem;
+      top: -20rem;
+    }
+    &:nth-child(4) {
+      left: 4rem;
+      top: -30rem;
+    }
+    &:nth-child(5) {
+      left: 5rem;
+      top: -40rem;
+    }
+  }
+  .section--opt-margin-negative & {
+    margin-top: -10rem;
+    position: relative;
+    &:first-child {
+      margin-top: 0;
+    }
+    // nth-child()를 5개 쓴 것과 같은 효과이다.
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        z-index: #{$i};
+      }
+    }
+  }
+  // 카드 중에서도 첫번째 카드는...
+  &:nth-child(1) {
+    margin-top: 0;
+  }
+  // 패딩을 넣을 때, 좌우보다 상하가 더 좁은 것이 더 좋다.
+  // 같은 값을 넣으면 폰트가 가진 위아래 공간 탓에 위래가 더 넓어보이게 된다.
+  // var(--card-m-y) => --는 무조건 이렇게 작성하는 것이 국룰, card-m-y는 우리가 지어주는 이름, m은 margin을 의미, --card-m-y가 변수이다.
+  &__top {
+    padding-block: var(--card-m-y);
+    padding-inline: var(--card-m-x);
+  }
+  &__middle {
+    width: 100%;
+    // aspect-ratio를 넣지 않으면 사진의 비율이 자기 멋대로임
+    aspect-ratio: 4 / 3;
+    // object-fit: cover를 넣으면 이미 정해져있는 이미지의 사이즈에서 사진을 크롭해서 비율이 망가지지 않도록 해준다.
+    // 사실상 디자이너들이 쓰는 것은 cover 굳이 더 쓴다면 contain
+    // contain은 이미지를 자르지 않고 정해진 영역안에 들어가게 된다.
+    object-fit: cover;
+  }
+  &__bottom {
+    padding-block: var(--card-m-y);
+    padding-inline: var(--card-m-x);
+  }
+  &__author {
+    font-weight: 600;
+  }
+  &__author-role {
+  }
+  &__title {
+    font-weight: 600;
+  }
+  &__subtitle {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: oklch(0.5 0 0);
+  }
+  &__desc {
+    display: -webkit-box;
+    // overflow: hidden 이 있어야 넘친 부분이 보이지 않는다.
+    overflow: hidden;
+    // 넣은 값만큼 줄 수를 보여준다. 3이면 세줄
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  &--type-new {
+    &::after {
+      position: absolute;
+      top: -0.75rem;
+      right: -0.75rem;
+      content: "N";
+      // lh = line hight의 약자
+      width: calc(1lh);
+      aspect-ratio: 1/1;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-align: center;
+      color: #fff;
+      display: block;
+      background-color: #ff0000;
+      border-radius: 624.9375rem;
+    }
+  }
+  &--pos-rel {
+    position: relative;
+  }
+}
