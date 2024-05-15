@@ -91,42 +91,355 @@
       <div class="section section__main">
         <div class="container container__main">
           <div class="sidebar">
-            <div class="sidebar sidebar__all">
-              <div class="sidebar__all search">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="pointer-events-none absolute left-3 top-[42px]"
-                >
-                  <title>Search</title>
-                  <path
-                    d="M8.33333 13.6667C11.555 13.6667 14.1667 11.055 14.1667 7.83333C14.1667 4.61167 11.555 2 8.33333 2C5.11167 2 2.5 4.61167 2.5 7.83333C2.5 11.055 5.11167 13.6667 8.33333 13.6667Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M17.5 17L12.5 12"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-                <input class="search__box" type="search" placeholder="Search" />
+            <div class="sidebar__all sidebar-all">
+              <div class="sidebar__all search-label">Search Library</div>
+              <div class="search-box visited">
+                <div class="search-box search-text-box">
+                  <input type="text" />
+                </div>
+                <div class="search-box search-icon">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="pointer-events-none absolute left-3 top-[42px]"
+                  >
+                    <title>Search</title>
+                    <path
+                      d="M8.33333 13.6667C11.555 13.6667 14.1667 11.055 14.1667 7.83333C14.1667 4.61167 11.555 2 8.33333 2C5.11167 2 2.5 4.61167 2.5 7.83333C2.5 11.055 5.11167 13.6667 8.33333 13.6667Z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M17.5 17L12.5 12"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar-buttons">
+              <button class="sidebar_home">Home</button>
+            </div>
+            <div class="sidebar-buttons">
+              <button class="sidebar_collections">Collections</button>
+            </div>
+            <div class="sidebar-buttons">
+              <button class="sidebar_categories">
+                <div>Categories</div>
+                <div class="categories_icon">
+                  <svg
+                    width="10"
+                    height="6"
+                    viewBox="0 0 10 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="ml-auto mr-5"
+                  >
+                    <title>Disclose arrow</title>
+                    <path
+                      d="M1 1L5 5L9 1"
+                      stroke="#4B4B4E"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+            </div>
+            <div class="sidebar__submit">
+              <h4 class="submit__headline">Contribute to Stark</h4>
+              <div class="submit__main">
+                Got any accessibility resources or news?
+              </div>
+              <div class="hover-background-color">
+                <button class="sidebar__submit-button">
+                  Submit a Resource
+                </button>
               </div>
             </div>
           </div>
-          <div class="main"></div>
+          <div class="hero">
+            <div class="main">
+              <div>
+                <div class="main__headline">
+                  <div class="headline__title">
+                    <h2>New in the Library</h2>
+                  </div>
+                  <div class="headline__view-all">
+                    <button class="headline__view-all-button">VIEW ALL</button>
+                  </div>
+                </div>
+              </div>
+              <div class="main__body-text">
+                Newly added accesssibility resources, guides, and more.
+              </div>
+              <div class="main__menu">
+                <button class="main__menu-menu">
+                  <div class="main__menu-icon">
+                    <img
+                      src="https://res.cloudinary.com/stark-lab/image/upload/v1679345547/daisy_high_e2e14faca3.jpg"
+                      class="library-thumbnail rounded-lg"
+                      width="38"
+                      height="38"
+                      alt="DAISY Consortium"
+                    />
+                  </div>
+                  <div class="main__menu-blue-text">RESOURCES</div>
+                  <h4 class="main__menu-body-text">Inclusive Publishig</h4>
+                </button>
+                <button class="main__menu-menu">
+                  <div class="main__menu-icon">
+                    <img
+                      src="https://res.cloudinary.com/stark-lab/image/upload/v1679345933/Screenshot_2023_03_20_at_3_58_45_PM_b615f86e7e.png"
+                      class="library-thumbnail rounded-lg"
+                      width="38"
+                      height="38"
+                      alt="The Accessible Publishing Learning Network"
+                    />
+                  </div>
+                  <div class="main__menu-blue-text">RESOURCES</div>
+                  <h4 class="main__menu-body-text">
+                    The APLN(Accessible Publishig Learning Network)
+                  </h4>
+                </button>
+                <button class="main__menu-menu">
+                  <div class="main__menu-icon">
+                    <img
+                      src="https://res.cloudinary.com/stark-lab/image/upload/v1679345736/uni_profile_93228_9c84b19231.jpg"
+                      class="library-thumbnail rounded-lg"
+                      width="38"
+                      height="38"
+                      alt="Humber College Institute of Technology and Advanced Learning"
+                    />
+                  </div>
+                  <div class="main__menu-blue-text">RESOURCES</div>
+                  <h4 class="main__menu-body-text">Making Accessible Books</h4>
+                </button>
+                <button class="main__menu-menu">
+                  <div class="main__menu-icon">
+                    <img
+                      src="https://res.cloudinary.com/stark-lab/image/upload/v1679345547/daisy_high_e2e14faca3.jpg"
+                      class="library-thumbnail rounded-lg"
+                      width="38"
+                      height="38"
+                      alt="DAISY Consortium"
+                    />
+                  </div>
+                  <div class="main__menu-blue-text">RESOURCES</div>
+                  <h4 class="main__menu-body-text">
+                    The DAISY Consortium's Accessible Publishing Konwledge Base
+                  </h4>
+                </button>
+                <button class="main__menu-menu">
+                  <div class="main__menu-icon">
+                    <img
+                      src="https://res.cloudinary.com/stark-lab/image/upload/v1658845042/language_please_logo_d4b822280f.png"
+                      class="library-thumbnail rounded-lg"
+                      width="38"
+                      height="38"
+                      alt="language please"
+                    />
+                  </div>
+                  <div class="main__menu-blue-text">RESOURCES</div>
+                  <h4 class="main__menu-body-text">
+                    Language, Please:Style Guide & Resources for journalists and
+                    storytellers
+                  </h4>
+                </button>
+                <button class="main__menu-menu">
+                  <div class="main__menu-icon">
+                    <img
+                      src="https://res.cloudinary.com/stark-lab/image/upload/v1653070254/library_author_google_7723cb132a.png"
+                      class="library-thumbnail rounded-lg"
+                      width="38"
+                      height="38"
+                      alt="Google"
+                    />
+                  </div>
+                  <div class="main__menu-blue-text">BLOG & ARTICLES</div>
+                  <h4 class="main__menu-body-text">
+                    4 steps to more inclusive, precise language
+                  </h4>
+                </button>
+              </div>
+            </div>
+            <div class="main">
+              <div>
+                <div class="main__headline">
+                  <div class="headline__title">
+                    <h2>Featured Collections</h2>
+                  </div>
+                  <div class="headline__view-all">
+                    <button class="headline__view-all-button">VIEW ALL</button>
+                  </div>
+                </div>
+              </div>
+              <div class="main__body-text">
+                Handpicked and curated collections areound accessibility.
+              </div>
+              <div class="main__menu-2">
+                <div class="buttonSettings">
+                  <button class="main__menu-2-button--1">
+                    <h4 class="main__menu-2-body-text-2">
+                      Disability Employment
+                    </h4>
+                    <div class="main__menu-2-icon-2-1">
+                      <img
+                        class="collections-card__image width-[261px] absolute bottom-0 left-0"
+                        loading="lazy"
+                        alt=""
+                        src="https://res.cloudinary.com/stark-lab/image/upload/v1653845742/library_collection_Collection_Boundless_Disability_Employment_c297d236d9.png"
+                      />
+                    </div>
+                  </button>
+                </div>
+                <div class="buttonSettings">
+                  <button class="main__menu-2-button--2">
+                    <h4 class="main__menu-2-body-text-2">
+                      Making Accessible Color Combos
+                    </h4>
+                    <div class="main__menu-2-icon-2-2">
+                      <img
+                        class="collections-card__image width-[261px] absolute bottom-0 left-0"
+                        loading="lazy"
+                        alt=""
+                        src="https://res.cloudinary.com/stark-lab/image/upload/v1653845743/library_collection_making_accessible_color_combos_42c8d90a99.png"
+                      />
+                    </div>
+                  </button>
+                </div>
+                <div class="buttonSettings">
+                  <button class="main__menu-2-button--1">
+                    <h4 class="main__menu-2-body-text-2">
+                      Tips and Tricks for Inclusive Social Media
+                    </h4>
+                    <div class="main__menu-2-icon-2-3">
+                      <img
+                        class="collections-card__image width-[261px] absolute bottom-0 left-0"
+                        loading="lazy"
+                        alt=""
+                        src="https://res.cloudinary.com/stark-lab/image/upload/v1653845743/library_collection_Inclusive_Social_Media_b9669e6d39.png"
+                      />
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="section section__footer">
-      <div class="container container__footer"></div>
+    <div class="Footer">
+      <div class="section section__footer">
+        <div class="container container__footer">
+          <div class="footer-information">
+            <div class="footer-information-part">
+              <div class="title">USE CASES</div>
+              <div class="text">For Designers</div>
+              <div class="text">For Developers</div>
+              <div class="text">For Product Managers</div>
+              <div class="text">For Compliance Managers</div>
+            </div>
+            <div class="footer-information-part">
+              <div class="title">RESOURCES</div>
+              <div class="text">Blog</div>
+              <div class="text">Library</div>
+              <div class="text">Release Notes</div>
+              <div class="text">Slack Commutity</div>
+            </div>
+            <div class="footer-information-part">
+              <div class="title">HELP</div>
+              <div class="text">My Account</div>
+              <div class="text">Support Docs</div>
+              <div class="text">Contact Us</div>
+              <div class="text">Featrue Requests</div>
+            </div>
+            <div class="footer-information-part">
+              <div class="title">COMPANY</div>
+              <div class="text">Stark Framework</div>
+              <div class="text">Privacy Policy</div>
+              <div class="text">Terms of Service</div>
+              <div class="text">Code of Conduct</div>
+            </div>
+            <div class="footer-information-part">
+              <div class="title">SECURITY</div>
+              <div class="text">Security Overview</div>
+              <div class="text">Cookie Policy</div>
+              <div class="text">GDPR</div>
+              <div class="text">Status</div>
+            </div>
+            <div class="footer-information-part">
+              <div class="title">DESIGN INTEGRATIONS</div>
+              <div class="text">Stark for Figma</div>
+              <div class="text">Stark for FigJam</div>
+              <div class="text">Stark for Sketch</div>
+              <div class="text">Stark for Adobe XD</div>
+            </div>
+            <div class="footer-information-part">
+              <div class="title">DEVELOPER INTEGRATIONS</div>
+              <div class="text">Stark for Chrome</div>
+              <div class="text">Stark for Firefox</div>
+              <div class="text">Stark for Edge</div>
+              <div class="text">Stark for Safari</div>
+              <div class="text">Stark for Arc</div>
+              <div class="text">Stark for Brave</div>
+            </div>
+          </div>
+          <div class="footer-others">
+            <div class="footer-others-flex">
+              <div class="footer-others-flex-icons">
+                <div class="footer-others-flex-icons-icon">
+                  <img
+                    alt="Stark's Twitter account link"
+                    src="https://images.getstark.co/marketing/social-media/twitter.png"
+                    class="w-8"
+                  />
+                </div>
+                <div class="footer-others-flex-icons-icon">
+                  <img
+                    alt="Stark's Instagram account link"
+                    src="https://images.getstark.co/marketing/social-media/instagram.png"
+                    class="w-8"
+                  />
+                </div>
+                <div class="footer-others-flex-icons-icon">
+                  <img
+                    alt="Stark's Slack account link"
+                    src="https://images.getstark.co/marketing/social-media/slack.png"
+                    class="w-8"
+                  />
+                </div>
+                <div class="footer-others-flex-icons-icon">
+                  <img
+                    alt="Stark's LinkedIn account link"
+                    src="https://images.getstark.co/marketing/social-media/share-linkedin.webp"
+                    class="w-8"
+                  />
+                </div>
+                <div class="footer-others-flex-icons-icon">
+                  <img
+                    alt="Stark's YouTube account link"
+                    src="https://images.getstark.co/marketing/social-media/youtube.png"
+                    class="w-8"
+                  />
+                </div>
+              </div>
+              <div class="footer-others-flex-text">
+                MADE REMOTELY WITH LOVE BY STARK LAB, INC, COPYRIGHT 2023
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
