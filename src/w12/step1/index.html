@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple js</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .container {
+        max-width: 75rem;
+        margin-inline: auto;
+        padding: 3rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-auto-rows: 1fr;
+        background-color: oklch(0.95 0 0);
+        gap: 1.5rem;
+      }
+
+      .card {
+        padding: 1rem;
+        background-color: oklch(0.9 0.2 240);
+        transition: all 300ms ease-in-out;
+      }
+
+      .card:hover {
+        background-color: oklch(0.9 0.2 120);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">Lorem.</div>
+      <div class="card">Distinctio, eos.</div>
+      <div class="card">Recusandae, molestias molestiae.</div>
+      <div class="card">Corrupti possimus aut odio!</div>
+      <div class="card">Soluta reprehenderit unde esse harum!</div>
+      <div class="card">Deleniti, unde pariatur. Alias, optio inventore!</div>
+      <div class="card">Eius quas tempore nemo fugit quam adipisci!</div>
+      <div class="card">
+        Omnis sit inventore cupiditate quo, asperiores consequatur incidunt?
+      </div>
+      <div class="card">
+        Maiores facere perspiciatis sint deserunt porro accusantium iste quo?
+      </div>
+      <div class="card">
+        Reiciendis, alias! Iste alias asperiores sequi. Nostrum perferendis eos
+        alias?
+      </div>
+    </div>
+  </body>
+</html>

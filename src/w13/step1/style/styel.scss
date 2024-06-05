@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+// h4이상은 불문율로 사용하지 않는다.
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: 75rem;
+  padding-inline: 1.5rem;
+  margin-inline: auto;
+  background-color: oklch(0.9 0 0);
+}
+
+.yt-video {
+  margin-inline: auto;
+  width: 100%;
+}
+
+#video1 {
+  aspect-ratio: 560 / 315;
+}
+
+#video2 {
+  aspect-ratio: 560 / 315;
+}
+
+// 글자가 아닌 것이 display가 block이 아닌 inline일 경우 텍스트가 들어올 수도 있는 공간을 남겨둔다.
+img,
+iframe {
+  display: block;
+}

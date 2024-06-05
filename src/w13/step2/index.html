@@ -1,0 +1,66 @@
+<!-- lottie로는 배경이 투명한 영상이 가능하다.
+단점은 무조건 벡터여야 한다는 점 -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lottie Embeding</title>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script>
+      LottieInteractivity.create({
+        player: '#lottie-2',
+        mode: 'cursor',
+        actions: [
+          {
+            type: 'click',
+            forceFlag: false,
+          },
+        ],
+      });
+    </script>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam
+        eius cupiditate quisquam consequatur pariatur? Veritatis perferendis
+        illum quis quasi!
+      </h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum totam
+        sed animi voluptates aliquid saepe ut aut, vero quas eius voluptatibus
+        voluptatem enim corrupti. Suscipit a quasi dignissimos inventore quia
+        aut voluptate autem ducimus impedit, ut quaerat dolor perspiciatis unde
+        ab? Vero impedit alias ad officia dolorum beatae ex assumenda.
+      </p>
+
+      <dotlottie-player
+        id="lottie-1"
+        class="lottie"
+        src="https://lottie.host/9b7b1c26-7831-4518-9185-09991dd08ccf/2v3149mGKK.json"
+        background="transparent"
+        speed="1"
+        loop
+        autoplay
+      ></dotlottie-player>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque nesciunt
+        ratione obcaecati facilis eum labore temporibus, veritatis nisi
+        similique cupiditate!
+      </p>
+      <dotlottie-player
+        id="lottie-2"
+        class="lottie"
+        src="https://lottie.host/9b7b1c26-7831-4518-9185-09991dd08ccf/2v3149mGKK.json"
+        background="transparent"
+        speed="1"
+      ></dotlottie-player>
+    </div>
+  </body>
+</html>
