@@ -1,3 +1,13 @@
+@use 'sass: list';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$bgcolors: #e30512, #1d3fbb, #ffbe00, #ff651a, #00c1b5, #ffffff, #fd5f8d;
+
+:root {
+  --fixed-m-x: 15px;
+  --fixed-m-y: 20px;
+}
+
 *,
 *::before,
 *::after {
@@ -5,5 +15,120 @@
 }
 
 body {
-  margin: 100px;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+img {
+  display: block;
+}
+
+.fixed {
+  position: fixed;
+  display: none;
+
+  @at-root a #{&},
+    a {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  p {
+    margin-block: 0;
+  }
+
+  &--pos {
+    &-tl {
+      top: var(--fixed-m-x);
+      left: var(--fixed-m-y);
+      display: block;
+    }
+    &-tr {
+      top: var(--fixed-m-x);
+      right: var(--fixed-m-y);
+    }
+    &-br {
+      bottom: var(--fixed-m-x);
+      right: var(--fixed-m-y);
+    }
+    &-bl {
+      right: calc(var(--fixed-m-x) + 64px + 100px);
+      left: var(--fixed-m-y);
+      bottom: var(--fixed-m-x);
+    }
+  }
+
+  &--role {
+    &-logo {
+      width: 260px;
+      aspect-ratio: 519/58;
+    }
+
+    &-contact {
+      font-weight: 700;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &-list {
+      padding-left: 0;
+      margin-block: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column-reverse;
+      line-height: 28.8px;
+      text-transform: capitalize;
+
+      > li {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &-about {
+      // text-wrap: balance; -> text의 정렬이 눈에 보기에 예쁘게 만들어준다.
+      text-wrap: balance;
+      font-weight: 700;
+      // ch - 몇 글자가 들어가게 할 것인가?
+      max-width: 30ch;
+    }
+  }
+
+  &__copyright {
+    font-size: 0.75rem;
+    font-weight: 400;
+
+    > a {
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__policy {
+    // lh - line-height와 같은 값
+    // a태그는 기본적으로 인라인 속성이기 때문에 lh값이 먹지 않는다.
+    // 그래서 display: block;을 사용한다.
+    display: block;
+    margin-top: 1lh;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+#issue {
+  @for $i from 1 through 7 {
+    &-#{$i} {
+      background-color: list.nth($bgcolors, $i);
+    }
+  }
 }
