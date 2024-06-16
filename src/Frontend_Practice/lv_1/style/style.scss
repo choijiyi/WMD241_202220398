@@ -1,4 +1,4 @@
-@use 'sass: list';
+@use 'sass:list';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 $bgcolors: #e30512, #1d3fbb, #ffbe00, #ff651a, #00c1b5, #ffffff, #fd5f8d;
@@ -6,7 +6,10 @@ $bgcolors: #e30512, #1d3fbb, #ffbe00, #ff651a, #00c1b5, #ffffff, #fd5f8d;
 :root {
   --fixed-m-x: 15px;
   --fixed-m-y: 20px;
+  --logo-h: 30px;
 }
+
+$bp-lg: 1000px;
 
 *,
 *::before,
@@ -14,11 +17,66 @@ $bgcolors: #e30512, #1d3fbb, #ffbe00, #ff651a, #00c1b5, #ffffff, #fd5f8d;
   box-sizing: border-box;
 }
 
+// 유일한 body보다 상위
+html {
+  // body에 넣으면 작동하지 않는다.
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  @media (width < $bp-lg) {
+    scroll-snap-type: none;
+  }
+}
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   line-height: 25px;
+  animation-name: bg-change;
+  animation-timeline: scroll();
+  background-color: list.nth($bgcolors, 7);
+}
+
+@keyframes bg-change {
+  // @for $i from 0 through 5 {
+  //   #{100 / 6 * $i}#{'%'},
+  //   #{100 / 6 * $i + 100 / 12}#{'%'} {
+  //     background-color: list.nth ($bgcolors, 7 - $i);
+  //   }
+  // }
+
+  // 100% {
+  //   background-color: list.nth ($bgcolors, 1);
+  // }
+
+  0%,
+  #{calc(100 / 6 * 0.5)}#{'%'} {
+    background-color: list.nth($bgcolors, 7);
+  }
+
+  #{calc(100 / 6)}#{'%'} {
+    background-color: list.nth($bgcolors, 6);
+  }
+
+  #{calc(100 / 6 * 2)}#{'%'} {
+    background-color: list.nth($bgcolors, 5);
+  }
+
+  #{calc(100 / 6 * 3)}#{'%'} {
+    background-color: list.nth($bgcolors, 4);
+  }
+
+  #{calc(100 / 6 * 4)}#{'%'} {
+    background-color: list.nth($bgcolors, 3);
+  }
+
+  #{calc(100 / 6 * 5)}#{'%'} {
+    background-color: list.nth($bgcolors, 2);
+  }
+
+  #{calc(100 / 6 * 6)}#{'%'} {
+    background-color: list.nth($bgcolors, 1);
+  }
 }
 
 img {
@@ -27,7 +85,7 @@ img {
 
 .fixed {
   position: fixed;
-  display: none;
+  z-index: 999;
 
   @at-root a #{&},
     a {
@@ -43,7 +101,6 @@ img {
     &-tl {
       top: var(--fixed-m-x);
       left: var(--fixed-m-y);
-      display: block;
     }
     &-tr {
       top: var(--fixed-m-x);
@@ -62,14 +119,19 @@ img {
 
   &--role {
     &-logo {
-      width: 260px;
+      height: var(--logo-h);
       aspect-ratio: 519/58;
     }
 
     &-contact {
       font-weight: 700;
+
       &:hover {
         text-decoration: underline;
+      }
+
+      @media (width < $bp-lg) {
+        display: none;
       }
     }
 
@@ -81,6 +143,10 @@ img {
       flex-direction: column-reverse;
       line-height: 28.8px;
       text-transform: capitalize;
+
+      @media (width < $bp-lg) {
+        display: none;
+      }
 
       > li {
         &:hover {
@@ -95,6 +161,9 @@ img {
       font-weight: 700;
       // ch - 몇 글자가 들어가게 할 것인가?
       max-width: 30ch;
+      @media (width < $bp-lg) {
+        display: none;
+      }
     }
   }
 
@@ -125,10 +194,134 @@ img {
   }
 }
 
+// #issue {
+//   @for $i from 1 through 7 {
+//     &-#{$i} {
+//       background-color: list.nth($bgcolors, $i);
+//     }
+//   }
+// }
+
 #issue {
-  @for $i from 1 through 7 {
-    &-#{$i} {
-      background-color: list.nth($bgcolors, $i);
+  // &-1 {
+  //   background-color: #e30512;
+  // }
+
+  // &-2 {
+  //   background-color: #1d3fbb;
+  // }
+
+  // &-3 {
+  //   background-color: #ffbe00;
+  // }
+
+  // &-4 {
+  //   background-color: #ff651a;
+  // }
+
+  // &-5 {
+  //   background-color: #00c1b5;
+  // }
+
+  // &-6 {
+  //   background-color: #ffffff;
+  // }
+
+  // &-7 {
+  //   background-color: #fd5f8d;
+  // }
+}
+
+.wrapper {
+  z-index: 1;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.issue {
+  scroll-snap-align: center;
+  display: grid;
+  // 1fr을 그냥 넣는 것 보단 minmax를 항상 설정하는 것이 좋다.
+  grid-template-columns: minmax(var(--fixed-m-x), 1fr) minmax(0, 420px) minmax(
+      var(--fixed-m-x),
+      1fr
+    );
+  grid-template-rows: minmax(calc(2 * var(--fixed-m-y) + var(--logo-h)), 1fr) auto 5lh minmax(
+      calc(2 * var(--fixed-m-y) + var(--logo-h)),
+      0.5fr
+    );
+
+  // vh는 viewport의 높이를 말한다.
+  // vh의 앞에는 s, l, d가 붙을 수 있다. 없을 수도 있지만 모바일 탓에 존재
+  min-height: 100svh;
+
+  &__img {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: stretch;
+  }
+
+  &__text {
+    grid-column: 2;
+    grid-row: 3;
+    text-align: center;
+  }
+
+  &__title {
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+
+  &__link {
+    margin-block: 1lh 0;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+
+.footer {
+  display: none;
+  @media (width < $bp-lg) {
+    display: block;
+  }
+
+  &__contact {
+    font-weight: 700;
+
+    &:hover {
+      text-decoration: underline;
     }
+  }
+
+  &__about {
+    text-wrap: balance;
+    font-weight: 700;
+    max-width: 30ch;
+  }
+}
+
+&__copyright {
+  font-size: 0.75rem;
+  font-weight: 400;
+
+  > a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+&__policy {
+  // lh - line-height와 같은 값
+  // a태그는 기본적으로 인라인 속성이기 때문에 lh값이 먹지 않는다.
+  // 그래서 display: block;을 사용한다.
+  display: block;
+  margin-top: 1lh;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
   }
 }
